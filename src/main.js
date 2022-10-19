@@ -32,7 +32,7 @@ function diableAddMeal(){
   document.querySelector("#button").style.display = "none";
 }
 
-function enableButton()
+function enableAddMeal()
 {
  document.querySelector("#button").style.display = "block"; 
 }
@@ -321,8 +321,10 @@ document.querySelector("#menu").addEventListener("click", async (e) => {
 });
 
 window.addEventListener("load", async () => {
+  diableAddMeal()
   notification("⌛ Loading...");
   await connectCeloWallet();
+  enableAddMeal()
   await getMeals();
   notificationOff();
 });
