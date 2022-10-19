@@ -28,6 +28,15 @@ function notificationOff() {
   document.querySelector(".alert").style.display = "none";
 }
 
+function diableAddMeal(){
+  document.querySelector("#button").style.display = "none";
+}
+
+function enableButton()
+{
+ document.querySelector("#button").style.display = "block"; 
+}
+
 const getUser = async function () {
   let username = prompt("Enter Your Name", "Guest");
   setTimeout(() => {
